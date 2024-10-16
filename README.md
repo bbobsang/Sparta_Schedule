@@ -1,5 +1,6 @@
 # [[ 프로젝트 구조 ]]
 
+```
 sparta-scheduler/
 ├── src/
 │   ├── main/
@@ -26,7 +27,7 @@ sparta-scheduler/
 │                       └── ...               # 테스트 클래스
 ├── pom.xml                                     # Maven 의존성 관리
 └── README.md                                   # 프로젝트 설명서
-
+```
 
 
 설명<br>
