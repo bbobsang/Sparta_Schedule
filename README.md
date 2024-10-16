@@ -65,9 +65,11 @@ sparta-scheduler/
 <br><br><br>
 
 ## [[ API 명세서 ]]
-![img.png](img.png)
+![image](https://github.com/user-attachments/assets/67369278-80dc-4591-8b46-4090e15e9be2)
+
 
 <br><br><br>
 
 ## [[ ERD ]]
-![img_1.png](img_1.png)
+![image](https://github.com/user-attachments/assets/1952fad7-1044-4629-8217-b2449dda4914)
+
