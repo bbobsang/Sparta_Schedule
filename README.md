@@ -1,4 +1,4 @@
-# 프로젝트 구조
+# [[ 프로젝트 구조 ]]
 
 sparta-scheduler/
 ├── src/
@@ -42,8 +42,8 @@ sparta-scheduler/
 
 DTO: 유효성 검사 및 요청/응답 모델을 정의합니다.
 
-## API 명세서
+## [[ API 명세서 ]]
 ![img.png](img.png)
 
-## ERD
+## [[ ERD ]]
 ![img_1.png](img_1.png)
