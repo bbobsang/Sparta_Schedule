@@ -1,0 +1,64 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# Gradle files
+.gradle/                    # Gradle 빌드에 사용되는 캐시 파일 및 설정 파일
+build/                      # 빌드 결과물 디렉터리
+out/                        # Eclipse에서 생성된 출력 파일 디렉터리
+
+# Local configuration files (sensitive information)
+src/main/resources/application.properties  # 데이터베이스 비밀번호 등 민감한 정보가 포함된 파일
+src/main/resources/application.yml         # YAML 설정 파일 (민감한 정보 포함)
+
+# Logs
+*.log                        # 로그 파일 (디버깅 정보 포함)
+
+# IDE specific files
+.idea/                       # IntelliJ IDEA 프로젝트 설정 파일
+*.iml                        # IntelliJ IDEA 모듈 파일
+*.ipr                        # IntelliJ IDEA 프로젝트 파일
+*.iws                        # IntelliJ IDEA 작업 파일
+.vscode/                     # Visual Studio Code 설정 파일
+*.classpath                  # Eclipse의 클래스패스 파일
+*.project                    # Eclipse 프로젝트 파일
+.DS_Store                    # macOS에서 생성되는 디렉터리 속성 파일
+
+# OS generated files
+Thumbs.db                   # Windows에서 생성되는 미리보기 캐시 파일
+ehthumbs.db                 # Windows에서 생성되는 미리보기 캐시 파일
+Desktop.ini                 # Windows에서 생성되는 데스크탑 설정 파일
