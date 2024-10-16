@@ -36,10 +36,12 @@ sparta-scheduler/
 └── README.md                                   # 프로젝트 설명서
 ```
 
-
+<br><br><br>
 
 ## [[ API 명세서 ]]
 ![img.png](img.png)
+
+<br><br><br>
 
 ## [[ ERD ]]
 ![img_1.png](img_1.png)
