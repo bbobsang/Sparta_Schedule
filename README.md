@@ -15,25 +15,47 @@ sparta-scheduler/
 │   │   │   └── com/
 │   │   │       └── sparta/
 │   │   │           └── spartascheduler/
-│   │   │               ├── controller/       # API 컨트롤러
-│   │   │               ├── entity/           # JPA 엔티티
-│   │   │               ├── exception/        # 사용자 정의 예외
-│   │   │               ├── repository/       # JPA 레포지토리
-│   │   │               ├── security/         # 보안 관련 코드
-│   │   │               ├── service/          # 서비스 레이어
-│   │   │               └── util/             # 유틸리티 클래스
+│   │   │               ├── controller/              # API 컨트롤러
+│   │   │               │   └── AuthController.java
+│   │   │               │   └── ScheduleController.java
+│   │   │               │   └── CommentController.java
+│   │   │               ├── dto/                      # 데이터 전송 객체
+│   │   │               │   └── UserDto.java
+│   │   │               │   └── ScheduleDto.java
+│   │   │               │   └── CommentDto.java
+│   │   │               ├── entity/                   # JPA 엔티티
+│   │   │               │   └── User.java
+│   │   │               │   └── Schedule.java
+│   │   │               │   └── Comment.java
+│   │   │               ├── exception/                # 사용자 정의 예외
+│   │   │               │   └── UserNotFoundException.java
+│   │   │               │   └── ScheduleNotFoundException.java
+│   │   │               ├── repository/               # JPA 레포지토리
+│   │   │               │   └── UserRepository.java
+│   │   │               │   └── ScheduleRepository.java
+│   │   │               │   └── CommentRepository.java
+│   │   │               ├── security/                 # 보안 관련 코드
+│   │   │               │   └── JwtUtil.java
+│   │   │               │   └── SecurityConfig.java
+│   │   │               ├── service/                  # 서비스 레이어
+│   │   │               │   └── UserService.java
+│   │   │               │   └── ScheduleService.java
+│   │   │               │   └── CommentService.java
+│   │   │               └── util/                     # 유틸리티 클래스
+│   │   │                   └── ResponseUtil.java
 │   │   ├── resources/
-│   │   │   ├── application.properties         # 설정 파일
-│   │   │   └── static/                        # 정적 리소스 (CSS, JS 등)
-│   │   └── webapp/                            # 웹 관련 리소스
+│   │   │   ├── application.properties                 # 설정 파일
+│   │   │   └── static/                                # 정적 리소스 (CSS, JS 등)
+│   │   └── webapp/                                    # 웹 관련 리소스
 │   └── test/
 │       └── java/
 │           └── com/
 │               └── sparta/
 │                   └── spartascheduler/
-│                       └── ...               # 테스트 클래스
-├── pom.xml                                     # Maven 의존성 관리
-└── README.md                                   # 프로젝트 설명서
+│                       └── ...                       # 테스트 클래스
+├── pom.xml                                            # Maven 의존성 관리
+└── README.md                                          # 프로젝트 설명서
+
 ```
 
 <br><br><br>
