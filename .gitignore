@@ -89,3 +89,7 @@ Desktop.ini                 # Windows에서 생성되는 데스크탑 설정 파
 hs_err_pid*
 replay_pid*
 >>>>>>> 736114ebffb8c3f5adb8161d03863370fc9a662b
+
+# Ignore application properties
+application.properties
+
