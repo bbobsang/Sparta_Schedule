@@ -70,5 +70,5 @@ public class User {
     // 사용자가 자신을 삭제할 수 있는지 확인하는 메서드
     public boolean isOwner(User loginUser) {
         return this.id.equals(loginUser.getId());
-    }
+    } 
 }
