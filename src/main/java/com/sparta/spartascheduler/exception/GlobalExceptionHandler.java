@@ -1,4 +1,3 @@
-// GlobalExceptionHandler.java
 package com.sparta.spartascheduler.exception;
 
 import org.springframework.http.HttpStatus;
@@ -56,5 +55,26 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleCommentNotFound(CommentNotFoundException ex) {
         ErrorResponse errorResponse = new ErrorResponse("ERR004", ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
+    }
+
+    // CannotDeleteException 발생 시 이 메서드가 호출됨
+    @ExceptionHandler(CannotDeleteException.class)
+    public ResponseEntity<ErrorResponse> handleCannotDelete(CannotDeleteException ex) {
+        ErrorResponse errorResponse = new ErrorResponse("ERR005", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(errorResponse);
+    }
+
+    // WeatherApiException 발생 시 이 메서드가 호출됨
+    @ExceptionHandler(WeatherApiException.class)
+    public ResponseEntity<ErrorResponse> handleWeatherApiException(WeatherApiException ex) {
+        ErrorResponse errorResponse = new ErrorResponse("ERR006", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+    }
+
+    // 기타 모든 예외를 처리하는 기본 핸들러
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleGenericException(Exception ex) {
+        ErrorResponse errorResponse = new ErrorResponse("ERR999", "알 수 없는 오류가 발생했습니다.");
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
     }
 }
