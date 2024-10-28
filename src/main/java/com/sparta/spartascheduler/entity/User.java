@@ -1,5 +1,6 @@
 package com.sparta.spartascheduler.entity;
 
+import com.sparta.spartascheduler.exception.CannotDeleteException;
 import com.sparta.spartascheduler.exception.InvalidEmailException;
 import com.sparta.spartascheduler.exception.InvalidPasswordException;
 import jakarta.persistence.*;
@@ -56,5 +57,18 @@ public class User {
         if (!password.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/`~].*")) {
             throw new InvalidPasswordException("비밀번호에는 최소한 하나의 특수 문자가 포함되어야 합니다.");
         }
+    }
+
+    // 사용자 삭제 메서드
+    public void delete(User loginUser) throws CannotDeleteException {
+        // 사용자 삭제 로직
+        if (!isOwner(loginUser)) {
+            throw new CannotDeleteException("이 사용자를 삭제할 권한이 없습니다.");
+        }
+    }
+
+    // 사용자가 자신을 삭제할 수 있는지 확인하는 메서드
+    public boolean isOwner(User loginUser) {
+        return this.id.equals(loginUser.getId());
     }
 }
