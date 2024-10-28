@@ -26,11 +26,15 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody UserDto userDto) {
-        User user = userService.findByEmail(userDto.getEmail());
+        User user = userService.findByEmail(userDto.getEmail())
+                .orElse(null);  // Optional<User>를 User 로 변환
+
+        // 사용자 존재 여부 및 비밀번호 확인
         if (user != null && userService.getPasswordEncoder().matches(userDto.getPassword(), user.getPassword())) {
             String token = userService.generateToken(user.getUsername(), user.getRole());
             return ResponseEntity.ok(token);
         }
         return ResponseEntity.status(401).body("Invalid credentials");
     }
+
 }

@@ -18,7 +18,8 @@ public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String userName; // 작성 유저명
+    private String userName;
+    private String userId; // 작성 유저명
     private String title; // 할일 제목
     private String content; // 할일 내용
     @CreatedDate

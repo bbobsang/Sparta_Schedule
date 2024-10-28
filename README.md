@@ -65,9 +65,9 @@ sparta-scheduler/
 <br><br><br>
 
 ## [[ API 명세서 ]]
-![img.png](img.png)
+![img_1.png](img_1.png)
 
 <br><br><br>
 
 ## [[ ERD ]]
-![img_1.png](img_1.png)
+![img.png](img.png)
