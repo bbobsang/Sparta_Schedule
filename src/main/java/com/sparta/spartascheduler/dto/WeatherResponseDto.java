@@ -1,40 +1,27 @@
 package com.sparta.spartascheduler.dto;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 public class WeatherResponseDto {
 
-    // Getter 및 Setter
     private Current current;
 
-    public void setCurrent(Current current) {
-        this.current = current;
-    }
-
+    @Setter
+    @Getter
     public static class Current {
+        // Getter 및 Setter
         private Condition condition;
 
-        // Getter 및 Setter
-        public Condition getCondition() {
-            return condition;
-        }
-
-        public void setCondition(Condition condition) {
-            this.condition = condition;
-        }
     }
 
+    @Setter
+    @Getter
     public static class Condition {
+        // Getter 및 Setter
         private String text; // 날씨 상태
 
-        // Getter 및 Setter
-        public String getText() {
-            return text;
-        }
-
-        public void setText(String text) {
-            this.text = text;
-        }
     }
+
 }
