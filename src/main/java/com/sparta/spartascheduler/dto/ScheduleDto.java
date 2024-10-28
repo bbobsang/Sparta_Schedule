@@ -2,7 +2,14 @@ package com.sparta.spartascheduler.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDate;
+
+
+@Getter
+@Setter
 public class ScheduleDto {
     @NotBlank
     @Size(max = 10)
@@ -15,30 +22,9 @@ public class ScheduleDto {
     @Size(max = 500)
     private String content;
 
-    public ScheduleDto() {}
 
-    public String getUserName() {
-        return userName;
-    }
+    private LocalDate date; // 날짜
+    private String location; // 위치
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
 }
 
